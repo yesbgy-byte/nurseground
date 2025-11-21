@@ -9,12 +9,12 @@ export const MentorSection: React.FC = () => {
           <Sparkles size={16} className="text-primary" />
           <span className="font-medium text-textSub text-sm">For Mentors</span>
         </div>
-        
+
         <h2 className="text-2xl md:text-3xl font-bold text-textMain mb-4">
           후배들의 길잡이가 되어주시겠습니까?
         </h2>
         <p className="text-textSub mb-10 max-w-2xl mx-auto leading-relaxed">
-          당신의 경험은 누군가에게 가장 확실한 지도가 됩니다.<br/>
+          당신의 경험은 누군가에게 가장 확실한 지도가 됩니다.<br />
           널스그라운드 멘토로 활동하며 새로운 가치를 만들어보세요.
         </p>
 
@@ -33,8 +33,8 @@ export const MentorSection: React.FC = () => {
           </div>
         </div>
 
-        <a 
-          href="#" 
+        <a
+          href="https://forms.gle/d82VPXf9usBpktr16"
           className="inline-flex items-center gap-2 text-primary font-bold hover:text-primary/80 transition-colors border-b border-transparent hover:border-primary pb-0.5"
         >
           멘토 지원하러 가기 <ArrowRight size={18} />
