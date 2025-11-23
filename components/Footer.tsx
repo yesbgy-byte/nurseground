@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/nurseground/" className="hover:text-white transition-colors">Instagram</a>
               <a href="https://www.threads.com/@nurseground" className="hover:text-white transition-colors">Threads</a>
-              <a href="https://pf.kakao.com/_kKUpn" className="hover:text-white transition-colors">Youtube</a>
+              <a href="https://pf.kakao.com/_kKUpn" className="hover:text-white transition-colors">Kakaotalk</a>
             </div>
           </div>
         </div>
