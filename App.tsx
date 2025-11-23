@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { StatisticsSection } from './components/StatisticsSection';
@@ -27,7 +28,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-[#F7F5F3]">
       <Header />
-      
+
       <main className="flex-grow">
         <Hero />
         <StatisticsSection />
@@ -41,7 +42,7 @@ const App: React.FC = () => {
 
       {/* Floating Action Button for Mobile/Desktop */}
       {showScrollTop && (
-        <button 
+        <button
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 bg-white text-primary p-3 rounded-full shadow-lg border border-gray-200 z-40 hover:bg-gray-50 transition-all animate-fade-in"
           aria-label="Scroll to top"
@@ -49,10 +50,10 @@ const App: React.FC = () => {
           <ArrowUp size={24} />
         </button>
       )}
-      
+
       {/* Mobile Sticky CTA */}
       <div className="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-        <button 
+        <button
           onClick={() => document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' })}
           className="w-full bg-primary text-white py-3 rounded-xl font-bold shadow-md active:bg-primary/90"
         >
@@ -61,6 +62,7 @@ const App: React.FC = () => {
       </div>
       {/* Padding for mobile sticky bottom */}
       <div className="md:hidden h-20"></div>
+      <Analytics />
     </div>
   );
 };
