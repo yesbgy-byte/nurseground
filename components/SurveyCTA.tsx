@@ -51,7 +51,7 @@ export const SurveyCTA: React.FC = () => {
           <div className="bg-primary/10 md:w-1/3 flex items-center justify-center p-10 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80 opacity-90"></div>
             <div className="relative z-10 text-white text-center">
-              <div className="text-6xl font-bold mb-2">50%</div>
+              <div className="text-6xl font-bold mb-2">66%</div>
               <div className="text-xl font-medium opacity-90">OFF</div>
               <div className="w-12 h-1 bg-white/30 mx-auto my-4"></div>
               <p className="text-sm opacity-80">Early Access<br />Special Benefit</p>

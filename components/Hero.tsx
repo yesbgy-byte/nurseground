@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
               onClick={() => window.open('https://forms.gle/WRvrWghuSwGsf2ZQ7', '_blank')}
               className="group relative flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
             >
-              <span className="relative z-10">설문 참여하고 50% 할인받기</span>
+              <span className="relative z-10">설문 참여하고 2만원 할인받기</span>
               <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
             </button>
