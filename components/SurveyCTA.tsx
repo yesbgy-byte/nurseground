@@ -31,7 +31,7 @@ export const SurveyCTA: React.FC = () => {
             <p className="text-textSub text-lg mb-8 leading-relaxed">
               지금 설문에 참여하여 여러분의 고민을 들려주세요.<br />
               참여해주신 모든 분께 서비스 런칭 시 사용 가능한<br />
-              <span className="font-bold text-textMain underline decoration-point/50 decoration-4 underline-offset-4">1:1 멘토링 50% 할인 쿠폰</span>을 드립니다.
+              <span className="font-bold text-textMain underline decoration-point/50 decoration-4 underline-offset-4">1:1 멘토링 2만원 할인 쿠폰</span>을 드립니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
