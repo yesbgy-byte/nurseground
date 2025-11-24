@@ -5,7 +5,7 @@ export const SurveyCTA: React.FC = () => {
   const handleSurveyLink = () => {
     // Replace with actual Google Form or Typeform URL
     // TODO: Update this link with the real survey URL
-    window.open('https://forms.google.com', '_blank');
+    window.open('https://forms.gle/WRvrWghuSwGsf2ZQ7', '_blank');
   };
 
   return (
