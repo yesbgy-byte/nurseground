@@ -34,7 +34,7 @@ export const MentorSection: React.FC = () => {
         </div>
 
         <a
-          href="https://forms.gle/d82VPXf9usBpktr16"
+          href="https://forms.gle/XfAcsZCEGfoQq9oj9"
           className="inline-flex items-center gap-2 text-primary font-bold hover:text-primary/80 transition-colors border-b border-transparent hover:border-primary pb-0.5"
         >
           멘토 지원하러 가기 <ArrowRight size={18} />
