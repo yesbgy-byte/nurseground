@@ -57,7 +57,7 @@ const App: React.FC = () => {
           onClick={() => document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' })}
           className="w-full bg-primary text-white py-3 rounded-xl font-bold shadow-md active:bg-primary/90"
         >
-          50% 할인받고 사전예약
+          2만원 할인받고 사전예약
         </button>
       </div>
       {/* Padding for mobile sticky bottom */}
