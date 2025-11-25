@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/assets/logo.png" alt="NurseGround" className="h-[100px] md:h-[120px] w-auto" />
+          <img src="/assets/logo.png" alt="NurseGround" className="h-[50px] md:h-[60px] w-auto" />
         </div>
 
         {/* Desktop Nav */}
