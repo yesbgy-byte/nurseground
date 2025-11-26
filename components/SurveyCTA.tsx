@@ -22,7 +22,7 @@ export const SurveyCTA: React.FC = () => {
           <div className="p-10 md:p-16 md:w-2/3 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 text-primary font-bold mb-4">
               <Gift size={20} />
-              <span>사전 예약 혜택</span>
+              <span>오픈 기념 특별 혜택</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-textMain mb-6 leading-snug">
               여러분의 소중한 의견이<br />
@@ -30,7 +30,7 @@ export const SurveyCTA: React.FC = () => {
             </h2>
             <p className="text-textSub text-lg mb-8 leading-relaxed">
               지금 설문에 참여하여 여러분의 고민을 들려주세요.<br />
-              참여해주신 모든 분께 서비스 런칭 시 사용 가능한<br />
+              참여해주신 모든 분께 서비스 런칭 시 바로 사용 가능한<br />
               <span className="font-bold text-textMain underline decoration-point/50 decoration-4 underline-offset-4">1:1 멘토링 2만원 할인 쿠폰</span>을 드립니다.
             </p>
 

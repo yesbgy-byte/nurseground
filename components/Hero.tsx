@@ -29,8 +29,8 @@ export const Hero: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-textSub max-w-2xl mx-auto leading-relaxed font-light">
-            간호사의 커리어 전환, 이제 혼자 고민하지 마세요.<br className="hidden md:block" />
-            이직부터 탈임상까지 모든 과정을 돕는 원스톱 생태계입니다.
+            널스그라운드가 선생님의 취직부터 이직,<br className="hidden md:block" />
+            성공적인 탈임상까지 모든 과정을 돕겠습니다.
           </p>
 
           {/* CTA Buttons */}
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
               onClick={() => window.open('https://forms.gle/WRvrWghuSwGsf2ZQ7', '_blank')}
               className="group relative flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
             >
-              <span className="relative z-10">설문 참여하고 2만원 할인받기</span>
+              <span className="relative z-10">설문참여하고 오픈기념 혜택 받기</span>
               <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
             </button>
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
 
           {/* Social Proof / Trust text (Optional) */}
           <p className="text-sm text-gray-400 pt-4">
-            * 설문 참여 시 런칭 후 1:1 멘토링 이용권을 드립니다.
+            * 설문 참여 시 1:1 멘토링 할인쿠폰을 드립니다.
           </p>
         </div>
       </div>
