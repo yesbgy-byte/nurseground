@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8 items-center">
           <button onClick={() => scrollToSection('problem')} className="text-textSub hover:text-primary font-medium transition-colors">왜 널스그라운드인가</button>
-          <button onClick={() => window.open('https://hypnotic-gymnast-e68.notion.site/2b797ed64f41802688b5ed05fe63c13a', '_blank')} className="text-textSub hover:text-primary font-medium transition-colors">이용 가이드</button>
+          <button onClick={() => window.open('https://nurseground.notion.site/2b797ed64f41802688b5ed05fe63c13a', '_blank')} className="text-textSub hover:text-primary font-medium transition-colors">이용 가이드</button>
           <button onClick={() => scrollToSection('mentor')} className="text-textSub hover:text-primary font-medium transition-colors">멘토 지원</button>
           <button
             onClick={() => window.open('https://hypnotic-gymnast-e68.notion.site/2b497ed64f41806a9e6ff1df39f15cea?source=copy_link', '_blank')}
