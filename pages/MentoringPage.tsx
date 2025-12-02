@@ -1,52 +1,43 @@
-import React, { useState } from 'react';
-import { loadTossPayments } from '@tosspayments/tosspayments-sdk';
-
-const clientKey = 'test_ck_0Poxy1XQL8RjvnyJgkK87nO5Wmlg';
+import React from 'react';
 
 export const MentoringPage: React.FC = () => {
-    const [price] = useState(50000);
-
-    const handlePayment = async () => {
-        try {
-            const tossPayments = await loadTossPayments(clientKey) as any;
-
-            await tossPayments.requestPayment('카드', {
-                amount: price,
-                orderId: Math.random().toString(36).slice(2),
-                orderName: '1:1 멘토링 1회권',
-                customerName: '김토스',
-                customerEmail: 'customer123@gmail.com',
-                successUrl: `${window.location.origin}/payment/success`,
-                failUrl: `${window.location.origin}/payment/fail`,
-            });
-        } catch (err) {
-            console.error(err);
-        }
-    };
-
     return (
         <div className="max-w-4xl mx-auto py-20 px-4">
             <h1 className="text-3xl font-bold mb-8 text-center text-primary">1:1 멘토링 신청</h1>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white p-8 rounded-2xl shadow-lg mb-8">
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-4">상품 정보</h2>
                     <div className="flex justify-between items-center border-b pb-4">
-                        <span>1:1 커리어 멘토링 (1시간)</span>
-                        <span className="font-bold">{price.toLocaleString()}원</span>
+                        <span>1:1 커리어 멘토링(50분)</span>
+                        <span className="font-bold">50,000원</span>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-xl mb-8 text-center text-gray-600">
-                    <p>결제 버튼을 누르면 토스페이먼츠 결제창이 열립니다.</p>
+                <div className="text-center">
+                    <a
+                        href="https://s.tosspayments.com/BmuBaP4IZGU"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-colors"
+                    >
+                        결제하기
+                    </a>
                 </div>
+            </div>
 
-                <button
-                    onClick={handlePayment}
-                    className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-colors"
+            <div className="bg-white p-4 rounded-2xl shadow-lg flex justify-center">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdukq997s8Az0v0axcB3gA8R31NSnCauul0cWNNDArmW5-ghA/viewform?embedded=true"
+                    width="640"
+                    height="2323"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title="Mentoring Survey"
                 >
-                    {price.toLocaleString()}원 결제하기
-                </button>
+                    로드 중…
+                </iframe>
             </div>
         </div>
     );
