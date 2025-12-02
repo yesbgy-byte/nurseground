@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>널스그라운드 | NurseGround</title>
+  <!-- Preconnect to CDN for faster font loading -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -18,13 +22,13 @@
             textSub: '#4B5563',
           },
           fontFamily: {
-            sans: ['Pretendard', 'sans-serif'],
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif'],
           },
         },
       },
     }
   </script>
-  <link rel="stylesheet" as="style" crossorigin
+  <link rel="stylesheet" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <style>
     body {
