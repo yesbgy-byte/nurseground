@@ -91,30 +91,29 @@ export const Hero: React.FC = () => {
             {/* Background Image with Gradient Overlay */}
             <div
               className="absolute inset-0 bg-cover bg-no-repeat transition-all duration-500"
-              style={{
-                backgroundImage: 'url(/assets/hero-slide-2.png)',
-              }}
             >
-              {/* Mobile specific styling via class names not inline styles for media queries */}
+              {/* Responsive Background Image */}
               <style>{`
                 .slide-2-bg {
-                  background-position: top center;
-                  background-size: 100% auto;
+                  background-image: url(/assets/hero-slide-2-mobile.jpg);
+                  background-position: center bottom; /* Align mobile image to bottom/center */
+                  background-size: cover;
                 }
                 @media (min-width: 768px) {
                   .slide-2-bg {
+                    background-image: url(/assets/hero-slide-2.png);
                     background-position: left center;
                     background-size: cover;
                   }
                 }
               `}</style>
-              <div className="absolute inset-0 slide-2-bg" style={{ backgroundImage: 'url(/assets/hero-slide-2.png)' }}></div>
+              <div className="absolute inset-0 slide-2-bg"></div>
 
               {/* Gradient Overlay:
-                  Mobile: Gradient from bottom to top to cover the empty space below image
+                  Mobile: Gradient from bottom to top to cover text area
                   Desktop: Gradient from left AND right to blend image
               */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#11544b] via-[#11544b] to-transparent md:bg-[linear-gradient(90deg,#11544b_0%,transparent_10%,transparent_60%,#11544b_100%)]"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#11544b] via-transparent to-transparent md:bg-[linear-gradient(90deg,#11544b_0%,transparent_10%,transparent_60%,#11544b_100%)]"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-20 md:pb-0">
