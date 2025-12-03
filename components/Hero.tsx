@@ -175,7 +175,7 @@ export const Hero: React.FC = () => {
               <div className="hidden md:block absolute inset-0 slide-2-gradient"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-24 md:pb-0">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-40 md:pb-0">
               <div className="max-w-xl text-center md:text-left text-white space-y-8 md:pr-16">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-lg break-keep">
                   뭐든 말해봐,<br />
