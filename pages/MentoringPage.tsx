@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export const MentoringPage: React.FC = () => {
+    const iframeRef = useRef<HTMLIFrameElement>(null);
+
+    useEffect(() => {
+        const handleMessage = (event: MessageEvent) => {
+            // Google Forms sends resize messages
+            if (event.origin === 'https://docs.google.com') {
+                try {
+                    const data = JSON.parse(event.data);
+                    if (data.height && iframeRef.current) {
+                        iframeRef.current.style.height = `${data.height}px`;
+                    }
+                } catch (e) {
+                    // Ignore parsing errors
+                }
+            }
+        };
+
+        window.addEventListener('message', handleMessage);
+        return () => window.removeEventListener('message', handleMessage);
+    }, []);
+
     return (
         <div className="max-w-4xl mx-auto py-20 px-4">
             <h1 className="text-3xl font-bold mb-8 text-center text-primary">1:1 멘토링 신청</h1>
 
             <div className="bg-white p-4 rounded-2xl shadow-lg flex justify-center mb-8">
                 <iframe
+                    ref={iframeRef}
                     src="https://docs.google.com/forms/d/e/1FAIpQLSeUMqXk7z7XEypQlUXtMr6yZRXeErewkyIeylejRs1AuC3wKw/viewform?embedded=true"
                     width="640"
                     frameBorder="0"
@@ -14,7 +36,7 @@ export const MentoringPage: React.FC = () => {
                     marginWidth={0}
                     scrolling="no"
                     title="Mentoring Survey"
-                    className="overflow-hidden h-[5500px] md:h-[3800px]"
+                    className="overflow-hidden min-h-[3800px] w-full"
                 >
                     로드 중…
                 </iframe>
