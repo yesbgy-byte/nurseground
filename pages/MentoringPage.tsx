@@ -9,11 +9,13 @@ export const MentoringPage: React.FC = () => {
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSdukq997s8Az0v0axcB3gA8R31NSnCauul0cWNNDArmW5-ghA/viewform?embedded=true"
                     width="640"
-                    height="2323"
+                    height="4500"
                     frameBorder="0"
                     marginHeight={0}
                     marginWidth={0}
+                    scrolling="no"
                     title="Mentoring Survey"
+                    className="overflow-hidden"
                 >
                     로드 중…
                 </iframe>
