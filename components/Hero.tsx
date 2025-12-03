@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,8 +22,36 @@ export const Hero: React.FC = () => {
     window.dispatchEvent(event);
   }, [currentSlide]);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const swipeThreshold = 50;
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe left - next slide
+        setCurrentSlide(1);
+      } else {
+        // Swipe right - previous slide
+        setCurrentSlide(0);
+      }
+    }
+  };
+
   return (
-    <section className="relative h-[800px] overflow-hidden bg-[#F7F5F3]">
+    <section
+      className="relative h-[800px] overflow-hidden bg-[#F7F5F3]"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Slides Container */}
       <div
         className="w-full h-full transition-transform duration-700 ease-in-out flex"
@@ -41,13 +71,13 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textMain leading-tight tracking-tight break-keep">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-textMain leading-tight tracking-tight break-keep">
                 커리어의 <span className="text-primary relative inline-block">
                   기반
                   <svg className="absolute w-full h-2 bottom-1 left-0 text-point/60 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                   </svg>
-                </span>이 되어주는 곳,<br />
+                </span><span className="whitespace-nowrap">이 되어주는 곳,</span><br />
                 <span className="block mt-2">널스그라운드</span>
               </h1>
 
@@ -96,7 +126,7 @@ export const Hero: React.FC = () => {
               <style>{`
                 .slide-2-bg {
                   background-image: url(/assets/hero-slide-2-mobile.jpg);
-                  background-position: center bottom; /* Align mobile image to bottom/center */
+                  background-position: center bottom;
                   background-size: cover;
                 }
                 @media (min-width: 768px) {
@@ -109,10 +139,7 @@ export const Hero: React.FC = () => {
               `}</style>
               <div className="absolute inset-0 slide-2-bg"></div>
 
-              {/* Gradient Overlay:
-                  Mobile: Gradient from bottom to top to cover text area
-                  Desktop: Gradient from left AND right to blend image
-              */}
+              {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#11544b] via-transparent to-transparent md:bg-[linear-gradient(90deg,#11544b_0%,transparent_10%,transparent_60%,#11544b_100%)]"></div>
             </div>
 
