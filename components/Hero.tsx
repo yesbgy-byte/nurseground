@@ -143,18 +143,18 @@ export const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#11544b] via-transparent to-transparent md:bg-[linear-gradient(90deg,#11544b_0%,transparent_10%,transparent_60%,#11544b_100%)]"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-20 md:pb-0">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-center h-full pb-20 md:pb-0">
               <div className="max-w-xl text-center md:text-right text-white space-y-8 md:pr-16">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-lg break-keep">
                   뭐든 말해봐,<br />
-                  <span className="text-point">널스그라운드</span>에서
+                  널스그라운드에서
                 </h1>
 
                 <button
                   onClick={() => navigate('/mentoring')}
-                  className="group relative inline-flex items-center justify-center gap-3 bg-white text-primary px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300"
+                  className="group relative inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300"
                 >
-                  <span>고민 해결하러 가기</span>
+                  <span>고민 해결하기</span>
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
