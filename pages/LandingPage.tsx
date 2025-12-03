@@ -43,6 +43,7 @@ export const LandingPage: React.FC = () => {
             )}
 
             {/* Mobile Sticky CTA */}
+            {/*
             <div className="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
                 <button
                     onClick={() => window.open('https://forms.gle/WRvrWghuSwGsf2ZQ7', '_blank')}
@@ -51,8 +52,11 @@ export const LandingPage: React.FC = () => {
                     다 퍼줄때 야무지게 받으러가기
                 </button>
             </div>
+            */}
             {/* Padding for mobile sticky bottom */}
+            {/*
             <div className="md:hidden h-20"></div>
+            */}
         </>
     );
 };

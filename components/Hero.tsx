@@ -8,6 +8,14 @@ export const Hero: React.FC = () => {
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 1 ? 0 : 1));
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
@@ -52,6 +60,22 @@ export const Hero: React.FC = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Navigation Arrows - Desktop Only */}
+      <button
+        onClick={prevSlide}
+        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white text-gray-800 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="Previous slide"
+      >
+        <ArrowRight size={24} className="rotate-180" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white text-gray-800 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="Next slide"
+      >
+        <ArrowRight size={24} />
+      </button>
+
       {/* Slides Container */}
       <div
         className="w-full h-full transition-transform duration-700 ease-in-out flex"
@@ -139,12 +163,13 @@ export const Hero: React.FC = () => {
               `}</style>
               <div className="absolute inset-0 slide-2-bg"></div>
 
-              {/* Gradient Overlay - Adjusted for better text readability if needed */}
-              <div className="absolute inset-0 bg-black/20"></div>
+              {/* Gradient Overlay - Mobile: subtle dark, Desktop: edge fade */}
+              <div className="absolute inset-0 bg-black/20 md:bg-transparent"></div>
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#11544b] via-transparent to-[#11544b]"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-center h-full">
-              <div className="max-w-xl text-center md:text-right text-white space-y-8 md:pr-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-start items-end md:items-center h-full pb-24 md:pb-0">
+              <div className="max-w-xl text-center md:text-left text-white space-y-8 md:pl-16">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-lg break-keep">
                   뭐든 말해봐,<br />
                   널스그라운드에서
