@@ -14,7 +14,7 @@ export const MentoringPage: React.FC = () => {
                     marginWidth={0}
                     scrolling="no"
                     title="Mentoring Survey"
-                    className="overflow-hidden w-full h-[6500px] xs:h-[6000px] sm:h-[5200px] md:h-[4500px] lg:h-[3800px]"
+                    className="overflow-hidden w-full h-[4200px] xs:h-[6000px] sm:h-[5200px] md:h-[4500px] lg:h-[3800px]"
                 >
                     로드 중…
                 </iframe>
