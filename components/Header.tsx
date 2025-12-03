@@ -54,6 +54,13 @@ export const Header: React.FC = () => {
     }
   }, [location, navigate]);
 
+  // Reset dark header when not on home page
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setIsDarkHeader(false);
+    }
+  }, [location.pathname]);
+
   // Determine text color: White if (Dark Header AND Not Scrolled), otherwise default dark gray
   // Also force default color if mobile menu is open (since mobile menu bg is white)
   const textColorClass = (isDarkHeader && !isScrolled && !isMobileMenuOpen) ? 'text-white hover:text-white/80' : 'text-textSub hover:text-primary';
