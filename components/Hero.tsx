@@ -63,17 +63,17 @@ export const Hero: React.FC = () => {
       {/* Navigation Arrows - Desktop Only */}
       <button
         onClick={prevSlide}
-        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white text-gray-800 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-30 text-white hover:text-gray-200 transition-all duration-300 hover:scale-110"
         aria-label="Previous slide"
       >
-        <ArrowRight size={24} className="rotate-180" />
+        <ArrowRight size={32} className="rotate-180 drop-shadow-lg" strokeWidth={2.5} />
       </button>
       <button
         onClick={nextSlide}
-        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white text-gray-800 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-30 text-white hover:text-gray-200 transition-all duration-300 hover:scale-110"
         aria-label="Next slide"
       >
-        <ArrowRight size={24} />
+        <ArrowRight size={32} className="drop-shadow-lg" strokeWidth={2.5} />
       </button>
 
       {/* Slides Container */}
@@ -163,13 +163,20 @@ export const Hero: React.FC = () => {
               `}</style>
               <div className="absolute inset-0 slide-2-bg"></div>
 
-              {/* Gradient Overlay - Mobile: subtle dark, Desktop: edge fade */}
+              {/* Gradient Overlay - Mobile: subtle dark, Desktop: edge fade only when > 1920px */}
               <div className="absolute inset-0 bg-black/20 md:bg-transparent"></div>
-              <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#11544b] via-transparent to-[#11544b]"></div>
+              <style>{`
+                @media (min-width: 1920px) {
+                  .slide-2-gradient {
+                    background: linear-gradient(90deg, #11544b 0%, transparent 10%, transparent 90%, #11544b 100%);
+                  }
+                }
+              `}</style>
+              <div className="hidden md:block absolute inset-0 slide-2-gradient"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-start items-end md:items-center h-full pb-24 md:pb-0">
-              <div className="max-w-xl text-center md:text-left text-white space-y-8 md:pl-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-24 md:pb-0">
+              <div className="max-w-xl text-center md:text-left text-white space-y-8 md:pr-16">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-lg break-keep">
                   뭐든 말해봐,<br />
                   널스그라운드에서
