@@ -28,7 +28,7 @@ export const SurveyCTA2: React.FC = () => {
             </h2>
 
             <p className="text-white/80 text-lg mb-8 leading-relaxed">
-              안정적인 공기업부터 전문성을 살린<strong>임상전담, 보험심사 간호사</strong>까지<br />
+              안정적인 공기업부터 전문성을 살린 <strong>임상전담, 보험심사 간호사</strong>까지<br />
               <strong>실제 합격 노하우와 현직자의 생생한 조언</strong>을 담았습니다.<br />
               설문에 참여하고 전자책과 멘토링 66% 할인 혜택을 받아가세요.
             </p>
