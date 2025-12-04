@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Hero } from '../components/Hero';
 import { MentorPool } from '../components/MentorPool';
-import { ServiceSection } from '../components/ServiceSection';
-import { MentorSection } from '../components/MentorSection';
+import { MentorSection2 } from '../components/MentorSection2';
 import { SurveyCTA } from '../components/SurveyCTA';
 import { ArrowUp } from 'lucide-react';
 
@@ -25,8 +24,7 @@ export const LandingPage: React.FC = () => {
         <>
             <Hero />
             <MentorPool />
-            <ServiceSection />
-            <MentorSection />
+            <MentorSection2 />
             <SurveyCTA />
 
             {/* Floating Action Button for Mobile/Desktop */}
