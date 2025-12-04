@@ -93,7 +93,7 @@ export const Header: React.FC = () => {
           <button onClick={() => window.open('https://nurseground.notion.site/2b797ed64f41802688b5ed05fe63c13a', '_blank')} className={`${textColorClass} font-medium transition-colors`}>이용 가이드</button>
           <button onClick={() => scrollToSection('mentor')} className={`${textColorClass} font-medium transition-colors`}>멘토 지원</button>
           <button
-            onClick={() => window.open('https://forms.gle/WRvrWghuSwGsf2ZQ7', '_blank')}
+            onClick={() => navigate('/mentoring')}
             className="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
           >
             지금 시작하기
@@ -114,7 +114,7 @@ export const Header: React.FC = () => {
           <button onClick={() => window.open('https://nurseground.notion.site/2b797ed64f41802688b5ed05fe63c13a', '_blank')} className="text-left text-textMain font-medium py-2">이용 가이드</button>
           <button onClick={() => scrollToSection('mentor')} className="text-left text-textMain font-medium py-2">멘토 지원</button>
           <button
-            onClick={() => window.open('https://forms.gle/WRvrWghuSwGsf2ZQ7', '_blank')}
+            onClick={() => { navigate('/mentoring'); setIsMobileMenuOpen(false); }}
             className="bg-primary text-white w-full py-3 rounded-lg font-bold text-center"
           >
             지금 시작하기
