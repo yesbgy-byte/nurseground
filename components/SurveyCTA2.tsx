@@ -48,6 +48,7 @@ export const SurveyCTA2: React.FC = () => {
               <h3 className="text-2xl font-extrabold text-textMain mb-2">NURSE<br />CAREER<br />GUIDE</h3>
               <div className="w-16 h-1 bg-point my-4"></div>
               <p className="text-sm text-textSub">간호사를 위한<br />커리어 로드맵 완전정복</p>
+              <div className="absolute bottom-4 right-4 bg-primary text-white text-xs px-2 py-1 rounded">Notion ver.</div>
             </div>
             <p className="text-white/60 text-sm text-center">
               * PC와 모바일 어디서든 편하게 보실 수 있도록<br />노션 링크로 제공됩니다.
