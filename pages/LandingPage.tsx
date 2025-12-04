@@ -27,7 +27,7 @@ export const LandingPage: React.FC = () => {
             <MentorPool />
             <MentorSection2 />
             <MentoringProcess />
-            A2 />
+            <SurveyCTA2 />
 
             {/* Floating Action Button for Mobile/Desktop */}
             {showScrollTop && (
