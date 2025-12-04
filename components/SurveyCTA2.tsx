@@ -30,7 +30,7 @@ export const SurveyCTA2: React.FC = () => {
             <p className="text-white/80 text-lg mb-8 leading-relaxed">
               산업간호사, CRA, 공무원 등 <strong>탈임상 직군별 정보</strong>와<br />
               <strong>현직자들의 현실적인 조언</strong>을 한 권에 담았습니다.<br />
-              설문에 참여하고 전자책과 멘토링 50% 할인 혜택을 받아가세요.
+              설문에 참여하고 전자책과 멘토링 66% 할인 혜택을 받아가세요.
             </p>
 
             <button
