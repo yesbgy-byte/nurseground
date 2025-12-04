@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Hero } from '../components/Hero';
 import { StatisticsSection } from '../components/StatisticsSection';
-import { ProblemSolution } from '../components/ProblemSolution';
+import { MentorPool } from '../components/MentorPool';
 import { ServiceSection } from '../components/ServiceSection';
 import { MentorSection } from '../components/MentorSection';
 import { SurveyCTA } from '../components/SurveyCTA';
@@ -26,7 +26,7 @@ export const LandingPage: React.FC = () => {
         <>
             <Hero />
             <StatisticsSection />
-            <ProblemSolution />
+            <MentorPool />
             <ServiceSection />
             <MentorSection />
             <SurveyCTA />
