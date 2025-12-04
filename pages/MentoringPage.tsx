@@ -34,7 +34,7 @@ export const MentoringPage: React.FC = () => {
 
                 <div className="text-center">
                     <a
-                        href="https://s.tosspayments.com/BmuBaP4IZGU"
+                        href="https://wisewhale.shop.blogpay.co.kr/view/good/avAA1"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-colors"
