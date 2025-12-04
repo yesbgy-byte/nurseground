@@ -20,7 +20,7 @@ export const MentorSection2: React.FC = () => {
 
           <div className="md:w-1/3 flex justify-start md:justify-end w-full">
             <a
-              href="#"
+              href="https://forms.gle/XfAcsZCEGfoQq9oj9"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 bg-white text-textMain font-medium hover:border-primary hover:text-primary transition-all duration-200"
             >
               <span>멘토 지원하기</span>
