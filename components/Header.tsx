@@ -15,8 +15,8 @@ export const Header: React.FC = () => {
     };
 
     const handleSlideChange = (e: CustomEvent) => {
-      // Slide index 1 is the dark slide
-      setIsDarkHeader(e.detail.slideIndex === 1);
+      // Slide index 0 is the dark slide
+      setIsDarkHeader(e.detail.slideIndex === 0);
     };
 
     window.addEventListener('scroll', handleScroll);

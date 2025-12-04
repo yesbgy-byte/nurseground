@@ -81,7 +81,63 @@ export const Hero: React.FC = () => {
         className="w-full h-full transition-transform duration-700 ease-in-out flex"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {/* Slide 1: Original Content */}
+        {/* Slide 1: New Image Content */}
+        <div className="w-full h-full flex-shrink-0 relative flex items-center bg-[#11544b]">
+          {/* Max Width Container for Image */}
+          <div className="w-full h-full max-w-[1920px] mx-auto relative">
+            {/* Background Image with Gradient Overlay */}
+            <div
+              className="absolute inset-0 bg-cover bg-no-repeat transition-all duration-500"
+            >
+              {/* Responsive Background Image */}
+              <style>{`
+                .slide-2-bg {
+                  background-image: url(/assets/hero-slide-2-mobile.png);
+                  background-position: center center;
+                  background-size: cover;
+                }
+                @media (min-width: 768px) {
+                  .slide-2-bg {
+                    background-image: url(/assets/hero-slide-2-desktop.png);
+                    background-position: center center;
+                    background-size: cover;
+                  }
+                }
+              `}</style>
+              <div className="absolute inset-0 slide-2-bg"></div>
+
+              {/* Gradient Overlay - Mobile: subtle dark, Desktop: edge fade only when > 1920px */}
+              <div className="absolute inset-0 bg-black/20 md:bg-transparent"></div>
+              <style>{`
+                @media (min-width: 1920px) {
+                  .slide-2-gradient {
+                    background: linear-gradient(90deg, #11544b 0%, transparent 10%, transparent 90%, #11544b 100%);
+                  }
+                }
+              `}</style>
+              <div className="hidden md:block absolute inset-0 slide-2-gradient"></div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-40 md:pb-0">
+              <div className="max-w-xl text-center md:text-left text-white space-y-8 md:pr-16">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-lg break-keep">
+                  뭐든 말해봐,<br />
+                  널스그라운드에서
+                </h1>
+
+                <button
+                  onClick={() => navigate('/mentoring')}
+                  className="group relative inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300"
+                >
+                  <span>고민 해결하기</span>
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 2: Original Content */}
         <div className="w-full h-full flex-shrink-0 relative flex items-center justify-center pt-20">
           {/* Background Decoration */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-point/10 to-primary/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -134,62 +190,6 @@ export const Hero: React.FC = () => {
               <p className="text-sm text-gray-400 pt-4">
                 * 설문 참여 시 1:1 멘토링 할인쿠폰을 드립니다.
               </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Slide 2: New Image Content */}
-        <div className="w-full h-full flex-shrink-0 relative flex items-center bg-[#11544b]">
-          {/* Max Width Container for Image */}
-          <div className="w-full h-full max-w-[1920px] mx-auto relative">
-            {/* Background Image with Gradient Overlay */}
-            <div
-              className="absolute inset-0 bg-cover bg-no-repeat transition-all duration-500"
-            >
-              {/* Responsive Background Image */}
-              <style>{`
-                .slide-2-bg {
-                  background-image: url(/assets/hero-slide-2-mobile.png);
-                  background-position: center center;
-                  background-size: cover;
-                }
-                @media (min-width: 768px) {
-                  .slide-2-bg {
-                    background-image: url(/assets/hero-slide-2-desktop.png);
-                    background-position: center center;
-                    background-size: cover;
-                  }
-                }
-              `}</style>
-              <div className="absolute inset-0 slide-2-bg"></div>
-
-              {/* Gradient Overlay - Mobile: subtle dark, Desktop: edge fade only when > 1920px */}
-              <div className="absolute inset-0 bg-black/20 md:bg-transparent"></div>
-              <style>{`
-                @media (min-width: 1920px) {
-                  .slide-2-gradient {
-                    background: linear-gradient(90deg, #11544b 0%, transparent 10%, transparent 90%, #11544b 100%);
-                  }
-                }
-              `}</style>
-              <div className="hidden md:block absolute inset-0 slide-2-gradient"></div>
-            </div>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex justify-center md:justify-end items-end md:items-center h-full pb-40 md:pb-0">
-              <div className="max-w-xl text-center md:text-left text-white space-y-8 md:pr-16">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-lg break-keep">
-                  뭐든 말해봐,<br />
-                  널스그라운드에서
-                </h1>
-
-                <button
-                  onClick={() => navigate('/mentoring')}
-                  className="group relative inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300"
-                >
-                  <span>고민 해결하기</span>
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
