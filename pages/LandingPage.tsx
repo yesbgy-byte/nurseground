@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Hero } from '../components/Hero';
-import { StatisticsSection } from '../components/StatisticsSection';
 import { MentorPool } from '../components/MentorPool';
 import { ServiceSection } from '../components/ServiceSection';
 import { MentorSection } from '../components/MentorSection';
@@ -25,7 +24,6 @@ export const LandingPage: React.FC = () => {
     return (
         <>
             <Hero />
-            <StatisticsSection />
             <MentorPool />
             <ServiceSection />
             <MentorSection />
