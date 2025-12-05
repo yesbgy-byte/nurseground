@@ -41,6 +41,25 @@ export const MentoringPage: React.FC = () => {
                     >
                         결제하기
                     </a>
+
+                    <div className="mt-6 text-left text-xs text-gray-600 leading-relaxed">
+                        <p className="font-semibold mb-2">⚠️ 취소 및 환불 규정 (필독)</p>
+
+                        <div className="mb-3">
+                            <p className="font-medium mb-1">일정 예약 전</p>
+                            <ul className="list-none space-y-1 ml-2">
+                                <li>• 조건 없이 100% 환불 가능합니다.</li>
+                                <li>• 단, 멘토 매칭 후 영업일 기준 5일 이내에 일정을 확정하지 않으시면 이용권이 자동 소멸되며 환불이 불가합니다.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p className="font-medium mb-1">일정 예약 확정 후</p>
+                            <ul className="list-none ml-2">
+                                <li>• 멘토링 진행 24시간 전부터는 취소 및 환불이 불가하오니 신중하게 일정을 선택해 주시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
